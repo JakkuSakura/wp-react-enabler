@@ -1,36 +1,36 @@
 <?php
 /**
- * WP-Reactivate
+ * WP-React-Enabler
  *
  *
- * @package   WP-Reactivate
- * @author    Pangolin
+ * @package   WP-React-Enabler
+ * @author    JiangkunQiu
  * @license   GPL-3.0
- * @link      https://gopangolin.com
- * @copyright 2017 Pangolin (Pty) Ltd
+ * @link      https://jeekrs.com
+ * @copyright 2021 JiangkunQiu
  *
  * @wordpress-plugin
- * Plugin Name:       WP-Reactivate
- * Plugin URI:        https://gopangolin.com
+ * Plugin Name:       WP-React-Enabler
+ * Plugin URI:        https://jeekrs.com
  * Description:       React boilerplate for WordPress plugins
- * Version:           1.0.2
- * Author:            pangolin
- * Author URI:        https://gopangolin.com
- * Text Domain:       wp-reactivate
+ * Version:           1.0.0
+ * Author:            JiangkunQiu
+ * Author URI:        https://jeekrs.com
+ * Text Domain:       wp-react-enabler
  * License:           GPL-3.0
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.txt
  * Domain Path:       /languages
  */
 
 
-namespace Pangolin\WPR;
+namespace JiangkunQiu\WPR;
 
 // If this file is called directly, abort.
 if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-define( 'WP_REACTIVATE_VERSION', '1.0.2' );
+define( 'WP_REACT_ENABLER_VERSION', '1.0.0' );
 
 
 /**
@@ -80,8 +80,9 @@ function init() {
 	$wpr_shortcode = Shortcode::get_instance();
 	$wpr_admin = Admin::get_instance();
 	$wpr_rest = Endpoint\Example::get_instance();
+	$wpr_entry = Entry::get_instance();
 }
-add_action( 'plugins_loaded', 'Pangolin\\WPR\\init' );
+add_action( 'plugins_loaded', 'JiangkunQiu\\WPR\\init' );
 
 
 
@@ -93,11 +94,11 @@ add_action( 'plugins_loaded', 'Pangolin\\WPR\\init' );
 function widget_init() {
 	return register_widget( new Widget );
 }
-add_action( 'widgets_init', 'Pangolin\\WPR\\widget_init' );
+add_action( 'widgets_init', 'JiangkunQiu\\WPR\\widget_init' );
 
 /**
  * Register activation and deactivation hooks
  */
-register_activation_hook( __FILE__, array( 'Pangolin\\WPR\\Plugin', 'activate' ) );
-register_deactivation_hook( __FILE__, array( 'Pangolin\\WPR\\Plugin', 'deactivate' ) );
+register_activation_hook( __FILE__, array( 'JiangkunQiu\\WPR\\Plugin', 'activate' ) );
+register_deactivation_hook( __FILE__, array( 'JiangkunQiu\\WPR\\Plugin', 'deactivate' ) );
 

@@ -1,35 +1,13 @@
-![alt-text](https://cloud.githubusercontent.com/assets/1805604/26199709/55c91bda-3bcb-11e7-871e-94b7a022cfa9.jpg "WP Reactivate - WordPress React Boilerplate")
-# WP Reactivate
-WP Reactivate is a React boilerplate built specifically for WordPress, allowing you to quickly and easily integrate React into your WordPress plugins.
+# WP React Enabler
+This plugin, based on WP Reactivate, provides basic functionality for a website to embed React components or replace existing parts.
+React-initializer replaces existing parts by extracting values from html tags.
 
-⚠️Since the release of Block Editor (Gutenberg) the Javascript ecosystem around WordPress has evolved rapidly. This repository, does not represent the best practices that should be used for React development in the WordPress.⚠️
-
-<!-- TOC -->
-
-- [WP Reactivate](#wp-reactivate)
-    - [Setup and installation](#setup-and-installation)
-    - [Usage](#usage)
-    - [Quick Start](#quick-start)
-        - [Introduction](#introduction)
-        - [Using the Shortcode](#using-the-shortcode)
-        - [Using the Widget](#using-the-widget)
-        - [Using REST Controllers](#using-rest-controllers)
-        - [Using the Settings Page](#using-the-settings-page)
-        - [Using fetchWP](#using-fetchwp)
-    - [Technologies](#technologies)
-    - [Tutorials](#tutorials)
-    - [Credits](#credits)
-
-<!-- /TOC -->
-
-## Setup and installation
-* **Install [Node 8.12.0 LTS or greater](https://nodejs.org)**
-* **Install [Yarn](https://yarnpkg.com/en/docs/install)** (Or use npm if you prefer)
-
+This plugin is still in early development.
 ## Usage
 * Install required modules: `yarn` (or `npm install`)
 * Build development version of app and watch for changes: `yarn build` (or `npm run build`)
 * Build production version of app:`yarn prod` (or `npm run prod`)
+* Start a test server with Docker `docker-compose up -d` and access http://localhost:18080/
 
 ## Quick Start
 ### Introduction
@@ -38,8 +16,9 @@ This boilerplate plugin provides three different WordPress views in which an ind
 - Shortcode
 - Widget
 - Settings page in the backend (wp-admin)
+- Frontend page
 
-Each JavaScript root file will correspond to the independant React app to be bundled by Webpack.
+Each JavaScript root file will correspond to the independent React app to be bundled by Webpack.
 
 *webpack.config.js*
 ```javascript =6
@@ -47,6 +26,7 @@ entry: {
   'js/admin': path.resolve(__dirname, 'app/admin.js'),
   'js/shortcode': path.resolve(__dirname, 'app/shortcode.js'),
   'js/widget': path.resolve(__dirname, 'app/widget.js'),
+  'js/entry': path.resolve(__dirname, 'app/entry.js'),
 },
 ```
   

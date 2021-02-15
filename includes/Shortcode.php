@@ -1,16 +1,5 @@
 <?php
-/**
- * WP-Reactivate
- *
- *
- * @package   WP-Reactivate
- * @author    Pangolin
- * @license   GPL-3.0
- * @link      https://gopangolin.com
- * @copyright 2017 Pangolin (Pty) Ltd
- */
-
-namespace Pangolin\WPR;
+namespace JiangkunQiu\WPR;
 
 /**
  * @subpackage Shortcode

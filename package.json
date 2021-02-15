@@ -18,14 +18,15 @@
     "plugin",
     "webpack"
   ],
-  "author": "Pangolin",
+  "author": "JiangkunQiu",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/gopangolin/wp-reactivate/issues"
+    "url": "https://github.com/qiujiangkun/wp-react-enabler/issues"
   },
-  "homepage": "https://github.com/gopangolin/wp-reactivate#readme",
+  "homepage": "https://github.com/qiujiangkun/wp-react-enabler#readme",
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
+    "@material-ui/core": "^4.11.3",
     "isomorphic-fetch": "^2.2.1",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",

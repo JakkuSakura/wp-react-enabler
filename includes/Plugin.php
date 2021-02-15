@@ -1,16 +1,5 @@
 <?php
-/**
- * WP-Reactivate
- *
- *
- * @package   WP-Reactivate
- * @author    Pangolin
- * @license   GPL-3.0
- * @link      https://gopangolin.com
- * @copyright 2017 Pangolin (Pty) Ltd
- */
-
-namespace Pangolin\WPR;
+namespace JiangkunQiu\WPR;
 
 /**
  * @subpackage Plugin
@@ -26,7 +15,7 @@ class Plugin {
 	 *
 	 * @var      string
 	 */
-	protected $plugin_slug = 'wp-reactivate';
+	protected $plugin_slug = 'wp-react-enabler';
 
 	/**
 	 * Instance of this class.
@@ -36,14 +25,18 @@ class Plugin {
 	 * @var      object
 	 */
 	protected static $instance = null;
+    /**
+     * @var $plugin_version
+     */
+    private $plugin_version;
 
-	/**
+    /**
 	 * Setup instance attributes
 	 *
 	 * @since     1.0.0
 	 */
 	private function __construct() {
-		$this->plugin_version = WP_REACTIVATE_VERSION;
+		$this->plugin_version = WP_REACT_ENABLER_VERSION;
 	}
 
 	/**
@@ -62,7 +55,7 @@ class Plugin {
 	 *
 	 * @since    1.0.0
 	 *
-	 * @return    Plugin slug variable.
+	 * @return    string Plugin slug variable.
 	 */
 	public function get_plugin_version() {
 		return $this->plugin_version;
